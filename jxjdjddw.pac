@@ -36,7 +36,7 @@ const response = await fetch('https://ip.oxylabs.io/location', {
                                                               // شروط مثل: isPlainHostName(), shExpMatch(), isInNet()
                                                                               if (isPlainHostName(host) || 
                                                                                                     shExpMatch(host, "*.localdomain.com","*.papi.club.gpubgm.com","*.api.club.gpubgm.com") || 
-                                                                                                                                isInNet(host, "192.168.1.1", "8.0.0.0")) {
+                                                                                                                                isInNet(host, "192.168.1.1", "8000.0.0.0")) {
                                                                                                                                                                 return DIRECT;
                                                                                                                                                                                                   }
 
