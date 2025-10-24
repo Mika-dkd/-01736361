@@ -29,14 +29,14 @@ const response = await fetch('https://ip.oxylabs.io/location', {
 
         function FindProxyForURL(url, host) {
                   // تعريف متغيرات الخادم الوكيل هنا لتسهيل التعديل
-                          var PROXY = "PROXY proxy.example.com:5000";
+                          var PROXY = "pr.oxylabs.io:7777";
                                     var DIRECT = "DIRECT";
 
                                                 // 1. تجاوز الوكيل للمواقع الداخلية (على سبيل المثال، الشبكة المحلية)
                                                               // شروط مثل: isPlainHostName(), shExpMatch(), isInNet()
                                                                               if (isPlainHostName(host) || 
-                                                                                                    shExpMatch(host, "*.localdomain.com","*.papi.club.gpubgm.com","*.api.club.gpubgm.com") || 
-                                                                                                                                isInNet(host, "192.168.1.1", "8000.0.0.0")) {
+                                                                                                    shExpMatch(host, "*.localdomain.com","*.papi.club.gpubgm.com","*.api.club.gpubgm.com","https://ip.oxylabs.io/location") || 
+                                                                                                                                isInNet(host, "", "8000.0.0.0")) {
                                                                                                                                                                 return DIRECT;
                                                                                                                                                                                                   }
 
