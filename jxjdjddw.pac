@@ -30,7 +30,7 @@ const response = await fetch('https://ip.oxylabs.io/location', {
         function FindProxyForURL(url, host) {
                   // تعريف متغيرات الخادم الوكيل هنا لتسهيل التعديل
                           var PROXY = "pr.oxylabs.io:4000";
-                                    var DIRECT = "DIRECT";
+                                    var DIRECT = "150.228.35.56";
 
                                                 // 1. تجاوز الوكيل للمواقع الداخلية (على سبيل المثال، الشبكة المحلية)
                                                               // شروط مثل: isPlainHostName(), shExpMatch(), isInNet()
