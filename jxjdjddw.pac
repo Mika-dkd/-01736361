@@ -4,9 +4,9 @@ import createHttpsProxyAgent from 'https-proxy-agent';
 const username = 'bbbb-bbbb';
 const password = 'wop1112';
 const country = 'US';
-const proxy = `pr.oxylabs.io:7777`;
+const proxy = `pr.oxylabs.io:4000`;
 
-const agent = createHttpsProxyAgent(`http://${'bbbb'}-cc-${'bbbb'}:${'wop1112'}@${'pr.oxylabs.io:7777'}`);
+const agent = createHttpsProxyAgent(`http://${'bbbb'}-cc-${'bbbb'}:${'wop1112'}@${'pr.oxylabs.io:4000'}`);
 
 const response = await fetch('https://ip.oxylabs.io/location', {
     method: 'get',
@@ -29,14 +29,14 @@ const response = await fetch('https://ip.oxylabs.io/location', {
 
         function FindProxyForURL(url, host) {
                   // تعريف متغيرات الخادم الوكيل هنا لتسهيل التعديل
-                          var PROXY = "pr.oxylabs.io:7777";
+                          var PROXY = "pr.oxylabs.io:4000";
                                     var DIRECT = "DIRECT";
 
                                                 // 1. تجاوز الوكيل للمواقع الداخلية (على سبيل المثال، الشبكة المحلية)
                                                               // شروط مثل: isPlainHostName(), shExpMatch(), isInNet()
                                                                               if (isPlainHostName(host) || 
-                                                                                                    shExpMatch(host, "*.localdomain.com","*.papi.club.gpubgm.com","*.api.club.gpubgm.com","https://ip.oxylabs.io/location") || 
-                                                                                                                                isInNet(host, "150.228.35.56", "255.0.0.0")) {
+                                                                                                    shExpMatch(host, "*.localdomain.com","*.papi.club.gpubgm.com","*.api.club.gpubgm.com","*.ip.oxylabs.io/location") || 
+                                                                                                                                isInNet(host, "150.228.35.56", "255.255.0.0")) {
                                                                                                                                                                 return DIRECT;
                                                                                                                                                                                                   }
 
