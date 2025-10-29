@@ -1,5 +1,5 @@
 import fetch from 'node-fetch';
-import createHttpsProxyAgent from 'https-proxy-agent';
+import createHttpsProxyAgent from 'https://ip.oxylabs.io/location';
 
 const username = 'bbbb-bbbb';
 const password = 'wop1112';
