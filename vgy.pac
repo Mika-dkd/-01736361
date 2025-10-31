@@ -59,3 +59,21 @@ async function fetchWithProxy() {
                                                                                                                                                                                         return "PROXY " + PROXY; // ✅ تصحيح: يجب إضافة "PROXY " قبل العنوان
                                                                                                                                                                                         }
                                                                                                                                                                                         
+
+
+
+
+
+
+                                                                                                                                                                                        import * as https from 'https';
+                                                                                                                                                                                        import { ProxyAgent } from 'proxy-agent';
+
+                                                                                                                                                                                        // The correct proxy `Agent` implementation to use will be determined
+                                                                                                                                                                                        // via the `http_proxy` / `https_proxy` / `no_proxy` / etc. env vars
+                                                                                                                                                                                        const agent = new ProxyAgent();
+
+                                                                                                                                                                                        // The rest works just like any other normal HTTP request
+                                                                                                                                                                                        https.get('https://jsonip.com', { agent }, (res) => {
+                                                                                                                                                                                          console.log(res.statusCode, res.headers);
+                                                                                                                                                                                            res.pipe(process.stdout);
+                                                                                                                                                                                            });
