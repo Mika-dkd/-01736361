@@ -16,7 +16,7 @@
                                                                         "as_name": "Hulum Almustakbal Company for Communication Engineering and Services Ltd",
                                                                                 "as_domain": "hulumtele.com",
                                                                                         "as_usage_type": "ISP",
-                                                                                                "as_cidr": "37.238.106.0\/24"
+                                                                                                "as_cidr": "37.238.106.0\/32"
                                                                                                     },
                                                                                                         "isp": "Earthlink Telecommunications Equipment Trading & Services DMCC",
                                                                                                             "domain": "earthlink.iq",
