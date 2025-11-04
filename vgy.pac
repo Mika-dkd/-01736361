@@ -9,17 +9,18 @@ const country = 'US';
 const proxyHostPort = 'pr.oxylabs.io:4000'; // تم تغيير الاسم للتوضيح
 
 // بناء رابط الوكيل بالصيغة الصحيحة باستخدام المتغيرات
-const proxyUrl = `http://${username}:${password}@${proxyHostPort}`;
-
+const proxyUrl = 'http://$(username):$(password)@$(proxyHostPort)';
 // إنشاء الوكيل باستخدام الرابط المصحح
-const agent = new HttpsProxyAgent(proxyUrl);
+
+
+const agent = new HttpsproxyAgent(proxyUrl);
 
 // ❌ لـ (await) يجب أن يكون الكود داخل دالة async
 async function fetchWithProxy() {
     try {
             const response = await fetch('https://ip.oxylabs.io/location', { 
                         method: 'get', 
-                                    agent: agent,
+                                    agent: new HttpsProxyAgent(proxyUrl),
                                             });
 
                                                     if (response.ok) {
@@ -69,11 +70,13 @@ async function fetchWithProxy() {
                                                                                                                                                                                         import { ProxyAgent } from 'proxy-agent';
 
                                                                                                                                                                                         // The correct proxy `Agent` implementation to use will be determined
-                                                                                                                                                                                        // via the `http_proxy` / `https_proxy` / `no_proxy` / etc. env vars
-                                                                                                                                                                                        const agent = new ProxyAgent();
+                                                                                                                                                                                        // via the `http_proxy` / `https_proxy` / `no_proxy` / etc. env   
+
+
+                                                                                                                                                                                
 
                                                                                                                                                                                         // The rest works just like any other normal HTTP request
-                                                                                                                                                                                        https.get('https://jsonip.com', { agent }, (res) => {
+                                                                                                                                                                                        https.get('https://jsonip.com', { agent: new HttpsProxyAgent(proxyUrl) }, (res) => {
                                                                                                                                                                                           console.log(res.statusCode, res.headers);
                                                                                                                                                                                             res.pipe(process.stdout);
                                                                                                                                                                                             });
