@@ -36,7 +36,7 @@ dev tun
 # Note that this setting must be correspond with the listening setting on
 # the VPN Server.
 # 
-# Specify either 'proto tcp' or 'proto udp'.
+ Specify either 'proto tcp' or 'proto udp'.
 
 proto udp
 
@@ -80,10 +80,10 @@ remote vpn625744455.opengw.net 16611
 # When you specify an unsupported algorithm, the error will occur.
 # 
 # The supported algorithms are as follows:
-#  cipher: [NULL-CIPHER] NULL AES-128-CBC AES-192-CBC AES-256-CBC BF-CBC
-#          CAST-CBC CAST5-CBC DES-CBC DES-EDE-CBC DES-EDE3-CBC DESX-CBC
-#          RC2-40-CBC RC2-64-CBC RC2-CBC
-#  auth:   SHA SHA1 MD5 MD4 RMD160
+ cipher: [NULL-CIPHER] NULL AES-128-CBC AES-192-CBC AES-256-CBC BF-CBC
+         CAST-CBC CAST5-CBC DES-CBC DES-EDE-CBC DES-EDE3-CBC DESX-CBC
+        RC2-40-CBC RC2-64-CBC RC2-CBC 
+# auth:   SHA SHA1 MD5 MD4 RMD160
 
 cipher AES-128-CBC
 auth SHA1
